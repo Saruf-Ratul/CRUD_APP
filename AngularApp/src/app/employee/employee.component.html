@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content white-text">
+                <div class="row">
+                    <div class="col s5">
+                        <form #employeeForm="ngForm" ng-Submit="onSubmit(employeeForm)">
+                            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="employeeService.selectedEmployee._id">
+                            <div class="row">
+                                <div class="input-field col s12"><br>
+                                    <input type="text" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name" placeholder="Enter full name">
+                                    <label>Name :
+                                        <label class="red-text">*</label>   
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12"><br>
+                                    <input type="text" name="position" #position="ngModel" [(ngModel)]="employeeService.selectedEmployee.position" placeholder="EX : Sr. Devloper">
+                                    <label>Position :
+                                        <label class="red-text">*</label>   
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12"><br>
+                                    <input type="text" name="office" #office="ngModel" [(ngModel)]="employeeService.selectedEmployee.office" placeholder="Enter Office Location">
+                                    <label>Office :
+                                        <label class="red-text">*</label>   
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12"><br>
+                                    <input type="text" name="salary" #salary="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Salary per month">
+                                    <label>Salary :
+                                        <label class="red-text">*</label>   
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12"><br>
+                                    <button class="btn btn-custom right" type="button" (click)="resetForm(employeeForm)">Reset</button>
+                                    <button class="btn btn-custom right" type="button">Submit</button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                    <div class="col s7">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
